@@ -138,7 +138,7 @@ For our exploration of the statistical properties, we plan to investigate a rang
 
 ## Plan for Collaboration
 
-Person 1 will focus on the foundational data generation and analysis functions (sim_binary_data and calc_prop_diff), while Person 2 will handle the more complex statistical implementations including repeated_sims and permutation_test. Person 3 will develop the bootstrap functionality and visualization components. For testing and documentation, each team member will write tests for their assigned functions, with cross-review procedures in place to ensure quality. Documentation responsibilities have been distributed with Person 1 handling Examples.Rmd and project coordination, Person 2 focusing on function documentation, and Person 3 managing testing documentation and integration.
+Rahif will focus on the foundational data generation and analysis functions (sim_binary_data and calc_prop_diff), while Abhiram will handle the more complex statistical implementations including repeated_sims and permutation_test. Ronnie will develop the bootstrap functionality and visualization components. For testing and documentation, each team member will write tests for their assigned functions, with cross-review procedures in place to ensure quality. Documentation responsibilities have been distributed with Rahif handling Examples.Rmd and project coordination, Abhiram focusing on function documentation, and Ronnie managing testing documentation and integration.
 
 ## Expected Challenges
 
