@@ -2,7 +2,7 @@
 title: "STAT 404 Final Project Plan"
 output: 
   pdf_document:
-    toc: true
+    toc: false
     toc_depth: 2
 date: "`r Sys.Date()`"
 ---
@@ -128,121 +128,26 @@ Process:
 
 # Tests
 
-## Core Function Tests
-
-### Data Generation Tests
-
-1.  Test sim_binary_data:
-    -   Valid input produces correct output structure
-    -   Invalid probabilities throw error
-    -   Invalid sample sizes throw error
-    -   Output has correct dimensions and data types
-
-### Statistical Tests
-
-1.  Test calc_prop_diff:
-    -   Known input produces expected difference and SE
-    -   Handles edge cases (all 0s, all 1s)
-
-### Visualization Tests
-
-1.  Test visualization functions:
-    -   Return expected plot objects
-    -   Handle various input sizes
-    -   Produce valid graphical elements
+Our testing strategy will focus on three main areas. For data generation, we will verify that sim_binary_data produces correctly structured output with valid inputs and appropriately handles invalid inputs. For statistical calculations, we will test calc_prop_diff against known values and edge cases to ensure accuracy. Finally, for visualization functions, we will verify that they produce valid plot objects and handle various input scenarios appropriately.
 
 # Examples
 
-We will explore the following parameter combinations:
-
-## Sample Sizes
-
--   Small (n = 10)
--   Medium (n = 30, 50)
--   Large (n = 100)
-
-## Effect Sizes
-
--   No effect (p1 = p2 = 0.5)
--   Small effect (p1 = 0.52, p2 = 0.5)
--   Medium effect (p1 = 0.7, p2 = 0.5)
--   Large effect (p1 = 0.8, p2 = 0.4)
-
-## Number of Repetitions
-
--   Coverage analysis: 10 to 1000 by 10s
--   Permutation tests: 1000 reps
--   Bootstrap: 1000 reps
--   Power analysis: 100 reps per condition
+For our exploration of the statistical properties, we plan to investigate a range of scenarios. We will examine four different sample sizes: small (n = 10), medium (n = 30, 50), and large (n = 100). These will be combined with four effect sizes ranging from no effect (p1 = p2 = 0.5) to large effects (p1 = 0.8, p2 = 0.4). For reproducibility and accuracy, we will use 1000 repetitions for our permutation tests and bootstrap analyses, while coverage analysis will explore sequences from 10 to 1000 by increments of 10. Power analysis will be conducted with 100 repetitions per condition to balance computational efficiency with accuracy.
 
 # Discussion
 
 ## Plan for Collaboration
 
-### Core Functions Development
-
--   Person 1: sim_binary_data, calc_prop_diff
--   Person 2: repeated_sims, permutation_test
--   Person 3: bootstrap_samples
--   Person 4: visualization functions
-
-### Testing
-
--   Each person writes tests for their functions
--   Cross-review of tests
-
-### Documentation
-
--   Person 1: Examples.Rmd
--   Person 2: Function documentation
--   Person 3: Testing documentation
--   Person 4: Project coordination and integration
+Person 1 will focus on the foundational data generation and analysis functions (sim_binary_data and calc_prop_diff), while Person 2 will handle the more complex statistical implementations including repeated_sims and permutation_test. Person 3 will develop the bootstrap functionality and visualization components. For testing and documentation, each team member will write tests for their assigned functions, with cross-review procedures in place to ensure quality. Documentation responsibilities have been distributed with Person 1 handling Examples.Rmd and project coordination, Person 2 focusing on function documentation, and Person 3 managing testing documentation and integration.
 
 ## Expected Challenges
 
-### Technical Challenges
-
-1.  Implementing correct SE formulas
-2.  Creating effective visualizations
-3.  Managing computational efficiency for large simulations
-
-### Conceptual Challenges
-
-1.  Understanding bootstrap vs theoretical approaches
-2.  Interpreting permutation test results
-3.  Explaining CLT implications
-
-### Group Coordination
-
-1.  Maintaining consistent coding style
-2.  Integrating different components
-3.  Managing version control
+On the technical side, ensuring correct implementation of standard error formulas and creating effective visualizations that clearly communicate results will require careful attention. The conceptual challenges include developing a deep understanding of bootstrap methods versus theoretical approaches and accurately interpreting permutation test results. Additionally, group coordination presents its own challenges, particularly in maintaining consistent coding style across team members and effectively managing version control for collaborative development.
 
 ## Feasibility Assessment
 
-### Highly Feasible
-
--   Core simulation functions
--   Basic visualizations
--   Testing framework
--   Standard error calculations
-
-### Moderate Challenge
-
--   Advanced visualizations
--   Performance optimization
--   Comprehensive documentation
-
-### Potential Issues
-
--   Time constraints for advanced features
--   Complex edge cases
--   Integration testing
+Based on our current understanding and team capabilities, we believe the core components of the project are highly feasible, including the basic simulation functions, standard error calculations, and testing framework. More challenging aspects that will require additional effort include advanced visualizations and performance optimization for large sample sizes. Time constraints may impact our ability to implement some advanced features, and complex edge cases will need consideration. Despite these challenges, we are confident in our ability to deliver a well-functioning implementation of the requirements.
 
 ## Clarifying Questions
 
-1.  Should the permutation test use standardized or raw differences?
-2.  For bootstrap intervals, should we implement percentile method as alternative?
-3.  Are there specific requirements for visualization style/formatting?
-4.  What level of optimization is expected for large sample sizes?
-5.  Should we include additional error handling beyond basic input validation?
+No clarifying questions at this time
