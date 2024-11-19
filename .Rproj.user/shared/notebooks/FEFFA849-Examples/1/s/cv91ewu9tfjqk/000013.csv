@@ -1,0 +1,7 @@
+"0","# Compare different sample sizes"
+"0","plot_sampling_dist("
+"0","  n_values = c(10, 30, 50, 100),  # varying sample sizes"
+"0","  p1 = 0.7,                       # probability for group 1"
+"0","  p2 = 0.5,                       # probability for group 2"
+"0","  reps = 1000                     # number of simulations"
+"0",")"

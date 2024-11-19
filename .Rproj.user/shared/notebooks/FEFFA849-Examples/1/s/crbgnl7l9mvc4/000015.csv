@@ -1,0 +1,4 @@
+"0",""
+"0","# Large effect"
+"0","data_large <- sim_binary_data(0.8, 0.4, 50, 50)"
+"0","plot_permutation_test(data_large, reps = 1000)"

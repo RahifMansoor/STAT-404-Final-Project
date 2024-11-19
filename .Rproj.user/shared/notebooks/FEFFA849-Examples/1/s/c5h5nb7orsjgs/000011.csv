@@ -1,0 +1,3 @@
+"0","# Compare cases with unequal sample sizes"
+"0","data_unequal <- sim_binary_data(0.7, 0.5, 30, 70)"
+"0","plot_permutation_test(data_unequal, reps = 1000)"

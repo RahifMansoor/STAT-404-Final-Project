@@ -1,0 +1,6 @@
+"0","# Generate data with a known difference"
+"0","set.seed(123)  # for reproducibility"
+"0","data <- sim_binary_data(0.7, 0.5, 50, 50)"
+"0",""
+"0","# Perform and visualize permutation test"
+"0","plot_permutation_test(data, reps = 1000)"
