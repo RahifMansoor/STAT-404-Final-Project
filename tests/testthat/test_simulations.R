@@ -2,6 +2,9 @@
 
 library(testthat)
 
+source("../../R/core_functions.R")
+source("../../R/visualization_functions.R")
+
 test_that("sim_binary_data produces valid output", {
   data <- sim_binary_data(0.5, 0.5, 100, 100)
   
@@ -27,7 +30,7 @@ test_that("calc_prop_diff produces expected output", {
   
   result <- calc_prop_diff(data)
   
-  expect_equal(result$diff, 0.5 - 0.3)
+  expect_equal(result$diff, 0.5 - 0.3)  # Now should pass
   expect_true(!is.na(result$se))
   expect_true(result$se > 0)
 })
